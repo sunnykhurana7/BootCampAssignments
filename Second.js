@@ -21,3 +21,4 @@
      }else {
        alert('its not a palindrome');
      }
+}
