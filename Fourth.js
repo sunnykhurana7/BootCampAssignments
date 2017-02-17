@@ -1,14 +1,13 @@
 
     function copytoanother(){
 
-    var destination = {    };
+      var destination,source;
+      destination = {    };
 
-      var source = {
-        "name":"Sunny Khurana",
-         "companyname":"To The New"
-      }
-
-
+       source = {
+          "name":"Sunny Khurana",
+           "companyname":"To The New"
+        }
 
       function copyparameters(destination,source){
         for(prop in source){

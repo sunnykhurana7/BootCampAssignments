@@ -1,24 +1,34 @@
 
    function  check(){
-    var str = document.getElementById('Str').value;
-    var  start = 0;
-    var last = str.length-1;
 
-    var retval = true;
+    // Declare variables
+    var str,start,last,retval;
+
+    str = document.getElementById('Str').value;
+    start = 0;
+    last = str.length-1;
+
+     retval = true;
      while(start<=last){
        if(str[start]==str[last]){
          start++;
          last--;
        }else {
-
          retval = false;
          break;
        }
+
+    //  str[start]==str[last] ? (start ++ , last --) : (retval = false, break);
+
+
      }
 
-     if(retval){
-       alert('its a palindrom');
-     }else {
-       alert('its not a palindrome');
-     }
+     retval ? alert('its a palindrome'): alert('its not a palindrome');
+
+
+    //  if(retval){
+    //    alert('its a palindrome');
+    //  }else {
+    //    alert('its not a palindrome');
+    //  }
 }
