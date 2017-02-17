@@ -2,7 +2,7 @@
 
 
       // Declare variables
-      var employee,count,increment,salary,arr;
+      var employee,count,salary,arr;
 
        employee = [
       { name: 'sunny', age: 23, salary: 28000 ,dob:7/07/1993},
@@ -21,16 +21,16 @@
 
 
        count = Object.keys(employee).length;
-       increment = 1;
+
       console.log("fetch those records that have more than 5000 salaries")
        for(var i = 0; i < count; i++) {
           if(employee[i].salary>5000){
-            console.log("Records" + increment);
+            console.log("Records" + i + 1);
             console.log(employee[i].name);
             console.log(employee[i].age);
             console.log(employee[i].salary);
             console.log(employee[i].dob);
-            increment++;
+
           }
       }
 
