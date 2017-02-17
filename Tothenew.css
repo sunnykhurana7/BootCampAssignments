@@ -72,7 +72,7 @@ padding:3px;
  }
 
 
-img
+.content img
 {
 width:960px;
 height:360px;
@@ -153,4 +153,43 @@ padding:15px 35px 10px 25px;
 {
 float:right;
 padding:20px;
+}
+
+
+
+.images{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.images ul {
+
+    width:960px;
+    padding: 0;
+
+}
+
+.images ul li
+{
+  list-style: none;
+  display: inline-block;
+  padding-right:22px;
+}
+
+
+.images ul li img
+{
+
+  height: 315px;
+  width: 215px;
+}
+
+.linedraw{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.images ul li span{
+  display: block;
+  text-align: center;
 }
