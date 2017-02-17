@@ -2,7 +2,7 @@
 
 
       // Declare variables
-      var employee,count,increment,salary,arr,imc;
+      var employee,count,increment,salary,arr;
 
        employee = [
       { name: 'sunny', age: 23, salary: 28000 ,dob:7/07/1993},
@@ -56,10 +56,10 @@
       }
       employee.sort(compare);
 
-      imc = 1;
+
       for(var l = 0;l<count;l++){
 
-          console.log('Record' + imc);
+          console.log('Record' + l + 1);
           console.log(employee[l].name);
           console.log(employee[l].age);
 
