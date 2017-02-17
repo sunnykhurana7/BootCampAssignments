@@ -1,0 +1,82 @@
+<!Doctype html>
+<html>
+	<head>
+	  <title>Table Demo</title>
+	
+	<style>
+	
+	table
+          {
+           margin-top:50px;
+		}
+
+	  th,td{
+		padding:5px;
+                background-color:cyan;
+		font-size:25px;
+	}
+	</style>
+
+	</head>
+	<body>
+	  <table border=1px;>
+            <caption>Employee Details</caption>
+		<thead>
+		   <tr>
+		     <th>ID</th>
+		     <th>Employee Name</th>
+		     <th>Designation</th>
+		     <th>Department</th>			
+		   </tr>	
+	        </thead>
+               
+               <tbody>
+		<tr>
+		 <td>1</td>
+		 <td>abc</td>
+		 <td>manager</td>
+		 <td>d1</td>  	
+		</tr>
+
+		<tr>
+		 <td>2</td>
+		 <td>def</td>
+		 <td>assistant</td>
+		 <td>d7</td>  	
+		</tr>
+
+
+		<tr>
+		 <td>3</td>
+		 <td>ghi</td>
+		 <td>manager</td>
+		 <td>d1</td>  	
+		</tr>
+
+		<tr>
+		 <td>4</td>
+		 <td>abc</td>
+		 <td>manager</td>
+		 <td>d1</td>  	
+		</tr>
+
+		<tr>
+		 <td>5</td>
+		 <td>def</td>
+		 <td>assistant</td>
+		 <td>d7</td>  	
+		</tr>
+
+
+		<tr>
+		 <td>6</td>
+		 <td>ghi</td>
+		 <td>manager</td>
+		 <td>d1</td>  	
+		</tr>
+
+
+	       </tbody>	
+	  </table>
+	</body>
+</html>
