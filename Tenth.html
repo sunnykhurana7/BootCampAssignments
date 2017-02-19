@@ -1,0 +1,162 @@
+<html>
+  <head>
+      <title>HOVER</title>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+      </script>
+
+      <script>
+      $(document).ready(function(){
+        $("#hoverli").hover(
+    function () {
+        $('#actions_menu').finish().slideDown('fast');
+    },
+    function () {
+        $('#actions_menu').finish().slideUp('fast');
+    }
+);
+      });
+      </script>
+
+      <style> /*       ul{
+          background-color: red;
+          width: 120px;
+          margin: 0;
+          padding:0;
+          list-style: none;
+          }
+
+        ul li
+        {
+          padding: 5px;
+          list-style: none;
+          display: block;
+          position: relative;
+          float: left;
+        }
+
+        li ul{
+          display: none;
+        }
+
+        ul li a
+{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+    padding: 5px 15px 5px 15px;
+    background: #2C5463;
+    margin-left: 1px;
+    white-space: nowrap;
+}
+
+
+ul li a:hover
+{
+  background: #617F8A;
+}
+
+li:hover ul{
+  display: block;
+  position: absolute;
+}*/
+.lbtn
+{
+  display:inline-block;
+  cursor:pointer;
+  height:20px;
+  background-color:silver;
+  background-repeat:repeat-x;
+  border:1px solid black; /* dark navy blue */
+  text-decoration:none;
+  font-size:11pt;
+  text-align:center;
+  line-height:20px;
+  padding:10px 10px 10px 10px;
+}
+
+.divMenuWrapper1
+{
+  height: 25px;
+  width: 75px;
+}
+
+.file_menu
+{
+  display:none;
+  width:75px;
+  border: 1px solid #1c1c1c;
+  background-color: white;
+  position:relative;
+  z-index:100000;
+}
+
+.file_menu div
+{
+  background-color: white;
+  font-size:10pt;
+}
+
+.file_menu div a
+{
+  color:gray;
+  text-decoration:none;
+  padding:3px;
+  padding-left:15px;
+  display:block;
+}
+
+.file_menu div a:hover
+{
+  padding:3px;
+  padding-left:15px;
+  text-decoration:underline;
+  color: black;
+}
+
+
+</style>
+  </head>
+
+<body>
+  <!-- <h3>
+      HOVER ME
+  </h3>
+
+  <!-- Menu create
+  <div class="menu">
+    <ul>
+        <li><a href="#">Hover Me</a>
+          <ul class="dropdown">
+            <li>Dropdown list</li>
+            <li>Dropdown list</li>
+            <li>Dropdown list</li>
+          </div>
+        </li>
+    </ul>
+  </div> -->
+
+  <div id="divMenuWrapper1" class="divMenuWrapper1">
+    <div id="hoverli">
+        <div class="lbtn">
+            HoverMe
+        </div>
+        <div id="actions_menu" class="file_menu">
+            <div><a href="#file">File</a></div>
+            <div><a href="#edit">Edit</a></div>
+            <div><a href="#view">View</a></div>
+            <hr />
+            <div><a href="#insert">Insert</a></div>
+            <div><a href="#modify">Modify</a></div>
+            <div><a href="#control">Control</a></div>
+            <div><a href="#debug">Debug</a></div>
+            <div><a href="#window">Window</a></div>
+            <div><a href="#help">Help</a></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

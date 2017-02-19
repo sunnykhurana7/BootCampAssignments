@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Stop if click its children elements</title>
+
+    <!-- js comes here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+
+    <script>
+    $(document).ready(function(){
+
+        $(".par").on('click', function(e){
+
+            if(e.target!==this)
+            return;
+
+            alert("i am parent")
+
+
+        });
+
+    });
+
+    </script>
+
+
+  </head>
+
+<body>
+    <div class="par">
+
+      I am parent
+
+      <ul>
+      <li>Stop</li>
+    </ul>
+    </div>
+</body>
+
+</html>

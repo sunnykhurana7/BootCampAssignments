@@ -1,0 +1,36 @@
+<html>
+  <head>
+      <title>Bind a Click Function</title>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+      </script>
+
+      <script>
+      $(document).ready(function(){
+
+          $("select").change(function(){
+
+              $(".container").append(this.value);
+
+          });
+
+      });
+
+      </script>
+  </head>
+
+
+<body>
+  <div class="container">
+
+
+  </div>
+
+  <select>
+      <option value="Master in Computer Application">MCA</option>
+      <option value="Bachelor Of Computer Application">BCA</option>
+      <option value="BTECH">BTECH</option>
+  </select>
+
+</body>
+</html>

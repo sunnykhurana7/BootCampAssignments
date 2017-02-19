@@ -1,0 +1,23 @@
+<html>
+  <head>
+      <title>On clicking on "google" tag. It is taking us to google home page. Stop it from happening.</title>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+      </script>
+      <script>
+      $(document).ready(function(){
+        $("a").on('click', function(e){
+          // ("a").attr("disabled":"false");
+            e.preventDefault();
+        });
+      });
+      </script>
+  </head>
+
+<body>
+  <div class="click">
+      <a href="http://www.google.com">Google</a>
+      <input type="submit" value="submit" class="click">
+  </div>
+</body>
+</html>

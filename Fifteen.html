@@ -1,0 +1,60 @@
+<html>
+  <head>
+      <title>Change Color if cell has larger number 10</title>
+
+
+      <!-- Script comes here-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+      </script>
+
+      <script>
+        $(document).ready(function(){
+          $(".change").click(function(){
+
+            $("table tr td").each(function(){
+                if($(this).text() >10){
+                   $(this).css("background-color", "red");
+                 }
+            });
+          });
+        });
+      </script>
+
+  </head>
+
+<style>
+  table ,tr ,td{
+    border: 1px solid black;
+    font-size: 25px;
+  }
+</style>
+
+<body>
+    <table class="tab">
+        <tr>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>5</td>
+        </tr>
+
+    </table>
+
+    <div class="change">
+        Please Click Me To Change The Cell Whose Values Is More Than 10
+    </div>
+</body>
+
+</html>
