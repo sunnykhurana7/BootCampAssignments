@@ -10,7 +10,7 @@
     var hi = 0;
     $(document).ready(function(){
         $(".click").click(function(){
-          $("*").each(function(){
+          $("div").each(function(){
             var h = $(this).height();
             if(h > hi) {
                 hi = h;
@@ -26,11 +26,11 @@
 
   <body>
 
-    <p style="height:100px;width:100px;background-color:red"> p has 100px height and 100px width</p>
+    <div style="height:100px;width:100px;background-color:red"> p has 100px height and 100px width</div>
 
-    <h2 style="height:210px;width:240px;background-color:yellow">i am heading 2</h2>
+    <div style="height:210px;width:240px;background-color:yellow">i am heading 2</div>
 
-    <span style="height:155px;width:240px;background-color:green;display:block">i am a span</span>
+    <div style="height:155px;width:240px;background-color:green;display:block">i am a span</div>
 
     <input type="submit" class="click" value="check max value">
   </body>
