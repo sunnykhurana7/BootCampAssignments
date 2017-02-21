@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Question 6</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+
+  var hours =  0;
+  var minutes = 0;
+  var seconds = 0;
+
+    $(document).ready(function(){
+
+         $("button").click(function(){
+              var interval = setInterval(function(){
+                seconds++;
+                if(seconds==60){
+                  seconds = 0;
+                  minutes++;
+                }
+                if(minutes==60){
+                  minutes = 0;
+                  hours++;
+                }
+                if(hours==2){
+                  alert('ur service stopped');
+                  clearInterval(interval);
+                }
+                var hh = hours;
+                var mm = minutes;
+                var ss = seconds;
+                if(hh<10){
+                  hh = '0' + hh;
+                }
+                if(mm<10)
+                   mm = '0' +  mm;
+                if(ss<10)
+                   seconds = '0' + ss;
+                  //  console.log(hours + ":" + minutes + ":" + seconds) ;
+                  $("div").text(hh + ":" + mm + ":" + ss);
+              },1000)
+               })
+    })
+  </script>
+<body>
+  <button >Start Time</button>
+  <div>
+
+  </div>
+</body>
+
+</html>

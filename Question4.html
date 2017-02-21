@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Demo For Ajax</title>
+  </head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script>
+
+    $(document).ready(function(){
+
+      $.ajax({
+
+        // url
+        url:"https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452",
+
+        type:"GET",
+
+
+        dataType:"json",
+
+      })
+
+
+      .done(function(json){
+
+
+        for(i=0;i<json.results.length;i++){
+
+
+        $("Table").append("<tr><td>" + json.results[i].formatted_address + "</td></tr") ;
+        $( "<div class=\"content\">").html( json.html ).appendTo( "body" );
+
+          }
+
+      })
+
+
+      // Code to run if the request fails; the raw request and
+  // status codes are passed to the function
+  .fail(function( xhr, status, errorThrown ) {
+    alert( "Sorry, there was a problem!" );
+    console.log( "Error: " + errorThrown );
+    console.log( "Status: " + status );
+    console.dir( xhr );
+  })
+  // Code to run regardless of success or failure;
+  .always(function( xhr, status ) {
+    alert( "The request is complete!" );
+  });
+
+
+      });
+
+  </script>
+
+<body>
+<table border="1px">
+
+</table>
+</body>
+
+
+</html>

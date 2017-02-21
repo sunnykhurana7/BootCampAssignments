@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Counter</title>
+
+    <script>
+        var num = 1;
+      function clicks(){
+
+        function counter(){
+
+            var increment = function(){console.log(num);num++;}
+
+            return increment;
+        }
+
+        counter()();
+
+      }
+
+
+    </script>
+
+  </head>
+
+
+<body>
+
+  <h2>Show Output in console</h2>  
+  <input type="submit" onclick="clicks()">
+</body>
+
+</html>

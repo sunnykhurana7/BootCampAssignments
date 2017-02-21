@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title></title>
+    <script>
+    function test() {
+    console.log(a);
+    console.log(fun());
+
+    var a = 1;
+    function fun() {
+    return 2;
+    }
+    }
+
+    test();
+    </script>
+
+
+  </head>
+
+  <body>
+      <p>Here first they call test() function then it print undefined because here hoisting applies which means variable a is declare but defination<br/>
+        is not there.. then they call fun() which return 2 and it print two...
+      </p>
+  </body>
+
+
+</html>

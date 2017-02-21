@@ -1,0 +1,21 @@
+<html>
+  <head>
+      <title>CallBack</title>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+      <script>
+        $(document).ready(function(){
+
+            $(".btnclick").click(function(){
+              $("p").hide(function(){
+                alert('data hide');
+              })
+            })
+
+        })
+      </script>
+        <button class="btnclick" value="Click">Click</button>
+        <p>Text Display</p>
+  </head>
+</html>

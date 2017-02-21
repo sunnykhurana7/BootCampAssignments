@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title></title>
+
+    <script type="text/javascript">
+
+    var principal = prompt("Enter principal");
+    var rate = prompt("Enter rate");
+    var time = prompt("Enter time");
+    var simpleinterest;
+
+
+    // var obj = {
+    //   name : "errorfind",
+    //   messg : "number not found"
+    // };
+
+    try {
+
+      if(principal<100 || principal > 100000){
+        // throw obj;
+        throw "Please Enter Number more than 100 and less than 100000";
+      }
+
+      if(time<1 || time>5){
+        throw "Please enter time more than equal to 1 and less than equal to 5";
+      }
+
+
+      if(rate<4  || rate >12){
+          throw "Please enter time more than equal to 1 and less than equal to 5";
+      }
+
+        simpleinterest = (principal*rate*time)/100;
+        alert('simple interest is:->' + simpleinterest);
+
+
+
+    } catch (e) {
+      // alert(e.messg);
+      // alert(e.name);
+      alert(e);
+    }
+
+
+    </script>
+
+
+  </head>
+
+</html>

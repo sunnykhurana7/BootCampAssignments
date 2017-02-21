@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+
+      var string = prompt("Enter String");
+      $(document).ready(function(){
+
+        // var arrayofstrings = string.split(" ");
+        // for(i = 0;i<arrayofstrings.length;i++){
+        //   // console.log(arrayofstrings[i]);
+        //   console.log(arrayofstrings[i].toUpperCase().charAt[0]);
+        // }for (var i
+
+        var splitstr = string.toLowerCase().split(' ');
+        for (var i  = 0;i<splitstr  .length;i++){
+          splitstr[i] = splitstr[i].charAt(0).toUpperCase() + splitstr[i].substring(1);
+        }
+
+        string  = splitstr.join(' ');
+
+
+        document.write(string);
+
+
+      });
+    </script>
+
+
+  </head>
+
+
+
+<body>
+
+</body>
+
+</html>

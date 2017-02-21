@@ -1,0 +1,29 @@
+<html>
+  <head>
+      <title></title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+
+    $(document).ready(function(){
+      debugger;
+    $.ajax({
+        type: 'GET',
+        url: 'demo.json',
+        dataType: 'json',
+        success: function(json) {
+            alert(json);
+        }
+    });
+    });
+  </script>
+
+  <!-- <body>
+    <table id="books">
+<tr>
+  <th>Chapter</th>
+  <th>Summary</th>
+</tr>
+</table> -->
+  </body>
+</html>
