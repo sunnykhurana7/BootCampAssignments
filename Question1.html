@@ -1,0 +1,62 @@
+<html>
+  <head>
+      <title>Question 1</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script>
+        $(document).ready(function(){
+
+        // function Animal(){
+        //   this.eats = true;
+        // }
+        //
+        // function Rabbit(){
+        //   this.canRunFast = true;
+        // }
+        //
+        // // var ani = new Animal();
+        // // console.log(ani);
+        //
+        // Rabbit.prototype = new Animal();
+        // var rabbit = new Rabbit();
+        // console.log(rabbit.eats);
+        // console.log(rabbit.canRunFast);
+
+
+        function person(){
+          this.pname = "i am from person";
+        }
+
+        function employee(){
+          this.ename = "i am from employee";
+        }
+
+        function developers(){
+          this.dname = "i am from developers";
+        }
+
+        employee.prototype = new person();
+        var employee = new employee();
+
+        developers.prototype = Object.create(employee);
+
+        var devel = new developers();
+
+        console.log(devel);
+
+        console.log(devel.pname);
+        console.log(devel.ename);
+        console.log(devel.dname);
+
+
+
+        });
+      </script>
+
+  </head>
+
+
+
+  <body>
+    <h3>Output in Console</h3>
+  </body>
+</html>

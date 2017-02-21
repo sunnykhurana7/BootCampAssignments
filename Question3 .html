@@ -1,0 +1,80 @@
+<html>
+<title>Question 2</title>
+<head>
+
+
+
+
+  <script>
+
+
+    var obj = {num:2};
+    var addToThis = function(a){
+
+      return this.num + a;
+    }
+    console.log(addToThis.call(obj,3));
+
+
+    var person =  {
+      name:'sunny',
+      print:function(){
+        console.log('Name is :',this.name);
+      }
+    };
+
+
+    var abc = person.print;
+    abc = abc.bind(person);
+    console.log(abc());
+
+
+
+</script>
+
+  <body>
+    <h2>Define Call with example</h2>
+
+    <p>
+      <h4>Explaination</h4>
+      <p>
+        call is basically a method with the help of these we invoke the function,and it takes two paramters first parameter will be
+        ( the context parameter ,<br/>anything passed here is accessible using this inside the function body) <br/>and second parameter takes (the value to the function itself)
+      </p>
+
+      <pre>
+        var obj = {num:2};
+        var addToThis = function(a){
+
+          return this.num + a;
+        }
+        console.log(addToThis.call(obj,3));
+      </pre>
+
+
+      <h2>Define Bind with example</h2>
+
+      <p>
+        <h4>Explaination</h4>
+        <p>
+          call is basically a method with the help of these we invoke the function,and it takes two paramters first parameter will be
+          ( the context parameter ,<br/>anything passed here is accessible using this inside the function body) <br/>and second parameter takes (the value to the function itself)
+        </p>
+
+        <pre>
+          var person =  {
+            name:'sunny',
+            print:function(){
+              console.log('Name is :',this.name);
+            }
+          };
+
+
+          var abc = person.print;
+          abc = abc.bind(person);
+          console.log(abc());
+        </pre>
+
+  </body>
+</head>
+</html>

@@ -1,0 +1,64 @@
+<html>
+  <head>
+      <title>Properties Of Argument Object</title>
+
+      <script>
+
+      function demo(a){
+
+        console.log('length of argument is :- '+ arguments.length);
+
+      }
+
+      demo(1,2,3,4);
+
+      function create() {
+         return function(n) {
+            if (n <= 1)
+               return 1;
+            return n * arguments.callee(n - 1);
+         };
+      }
+
+      var result = create()(5);
+      console.log(result);
+
+
+      </script>
+
+
+  </head>
+
+<body>
+    <h3>Question:- Properties Of Arguments Obj</h3>
+    <h6>Output in console</h6>
+    <pre>
+        <h4>1. arguments.length</h4>
+        <p>Determine the length of arguments object</p>
+        <pre>
+function demo(a){
+console.log('length of argument is :- '+ arguments.length);
+}
+
+demo(1,2,3,4);
+        </pre>
+
+        <h4>2. arguments.callee</h4>
+        <p>Reference To Currently Executing Function</p>
+<pre>
+function create() {
+return function(n) {
+if (n <= 1)
+return 1;
+return n * arguments.callee(n - 1);
+};
+}
+
+var result = create()(5);
+console.log(result);
+
+    </pre>
+
+</body>
+
+</html>
