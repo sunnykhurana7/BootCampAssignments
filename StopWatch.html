@@ -1,0 +1,103 @@
+<html>
+  <head>
+      <title>StopWatch</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+    var hours = 0;
+    var minutes = 0;
+    var seconds = 0;
+    var hh = 0;
+    var mm = 0;
+    var ss = 0;
+
+    var interval;
+
+    $(document).ready(function(){
+
+      $(".hou").text("00" + ":");
+      $(".min").text("00" + ":");
+      $(".sec").text("00");
+
+      $(".start").click(function(){
+         interval = setInterval(function(){
+          seconds++;
+          if(seconds==60){
+            seconds = 0;
+            minutes++;
+          }
+          if(minutes==60){
+            minutes = 0;
+            hours++;
+          }
+
+           hh = hours;
+           mm = minutes;
+           ss = seconds;
+          if(hh<10){
+            hh = '0' + hh;
+          }
+          if(mm<10)
+             mm = '0' +  mm;
+          if(ss<10)
+             seconds = '0' + ss;
+          $(".hou").text(hh + ":");
+          $(".min").text(mm + ":");
+          $(".sec").text(ss);
+        },1000);
+      });
+
+      $(".laps").click(function(){
+        $(".add").append("<li>" + hh + ":" + mm  + ":" + ss +  "</li>");
+      });
+
+      $(".stop").click(function(){
+        clearInterval(interval);
+      });
+
+      $(".reset").click(function(){
+
+        clearInterval(interval);
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+        $(".hou").text(hours + ":");
+        $(".min").text(minutes + ":");
+        $(".sec").text(seconds);
+      });
+        $("li").remove();
+})
+
+
+</script>
+
+<body>
+
+    <div>
+
+    </div>
+
+    <div class="time" style="height:31px;width:106px;background-color:black;margin-top:20px;margin-left:20px;margin-bottom:20px;">
+
+    <span style="padding-top:20px;">
+      <span style="color:white;font-size:25px;" class="hou"></span>
+      <span style="color:white;font-size:25px;" class="min"></span>
+      <span style="color:white;font-size:25px;" class="sec"></span>
+    </span>
+
+    </div>
+
+    <button class="start">Start</button>
+    <button class="Stop">Stop</button>
+    <button class="laps">Laps</button>
+    <button class="reset">Reset</button>
+
+    <ol class="add">
+
+    </ol>
+
+
+</body>
+
+</html>

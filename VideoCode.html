@@ -1,0 +1,126 @@
+<html>
+  <head>
+      <title>Video Display</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+      <style>
+        .container
+        {
+          width:600px;
+          margin: 0 auto;
+        }
+
+        .content {
+          margin-top: 40px;
+        }
+
+        .infor{
+          margin-top: 40px;
+        }
+
+        table thead tr td
+        {
+          font-weight: bold;
+        }
+
+        table tbody tr td
+        {
+          text-align: center;
+        }
+
+        .infor{
+          width: 317px;
+          margin: 0 auto;
+          margin-top: 40px;
+        }
+
+        legend
+        {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      </style>
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="videodis">
+        <video id="myVideo" controls="" src="Short video clip-nature.mp4.mp4" type="video/mp4" style="width:596px;height:400px;">
+
+        </video>
+
+        <div class="datashow">
+          <div class="controls">
+              <fieldset>
+                  <legend>Controls</legend>
+                  <div class="but">
+                      <button class="btnStart">START</button>
+                      <button class="btnStop">STOP</button>
+                  </div>
+              </fieldset>
+          </div>
+
+          <div class="infor">
+            <table border = "1px">
+              <thead>
+                  <tr>
+                      <td>Starting Time</td>
+                      <td>Current Time</td>
+                      <td>Remaining Time</td>
+                      <td>Finish Time</td>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td class="startTime">0.00</td>
+                      <td class="currentTime"></td>
+                      <td class="remainingTime"></td>
+                      <td class="finishTime"></td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+<!-- sctipt tag goes here-->
+<script>
+  $(document).ready(function(){
+    //debugger;
+    var myvideo = document.getElementById("myVideo");
+    var finishtime = myvideo.duration;
+
+
+    var finishtime;
+    setTimeout(function(){
+      finishtime = myvideo.duration;
+
+      $(".finishtime").text(Math.floor(myvideo.duration));
+    },100);
+
+    var curr = setInterval(function(){
+
+      var currenttime = myvideo.currentTime;
+
+      $(".currentTime").text(Math.floor(myvideo.currentTime));
+      $(".remainingTime").text(Math.floor(finishtime - currenttime));
+
+    },1);
+    $(".btnStart").click(function(){
+        myvideo.play();
+    });
+    $(".btnStop").click(function(){
+        myvideo.pause();
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+  <head>
+      <title></title>
+      <script>
+
+      
+
+var obj1={name:"sunny khurana",age:23};
+
+function copy(obj)
+{
+
+var obj2={};
+
+for(var prop in obj)
+{
+   if(obj.hasOwnProperty(prop))
+   obj2[prop]=obj[prop];
+
+}
+    return obj2;
+
+}
+
+var obj3=copy(obj1);
+
+document.write("name = "+obj3.name+" , "+"age = "+obj3.age);
+
+</script>
+
+      </script>
+  </head>
+</html>
